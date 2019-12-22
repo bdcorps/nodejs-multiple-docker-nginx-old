@@ -11,6 +11,10 @@ app.get("/", function(req, res) {
   res.sendFile(path.join(__dirname, "public", "index.html"));
 });
 
+app.get("/a", function(req, res) {
+  res.send("on a ");
+});
+
 //specifying the listening port
 var server = app.listen(app.get("port"), HOST, function() {
   console.log(
